@@ -204,7 +204,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5rem 3rem;
+    padding: 0;
   }
 
   .about {
@@ -212,6 +212,7 @@ a {
     flex-shrink: 0;
     padding-left: 1.5em;
     padding-right: 1.5em;
+    min-width: 0;
   }
 }
 
