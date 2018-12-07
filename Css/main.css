@@ -206,6 +206,13 @@ a {
     align-items: center;
     padding: 5rem 3rem;
   }
+
+  .about {
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
 }
 
 @media screen and (min-width: 800px) {
