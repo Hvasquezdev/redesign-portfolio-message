@@ -24,7 +24,7 @@ a {
 
 .wallpaper {
   display: block;
-  height: 100%;
+  min-height: 100%;
   left: 0;
   top: 0;
   width: 100%;
@@ -197,17 +197,77 @@ a {
   transform: scale(1.1);
 }
 
+.arrow-down {
+  bottom: 30px;
+  position: absolute;
+}
+
+.arrow-down i {
+  cursor: pointer;
+  font-size: 2rem;
+  opacity: .7;
+  padding: 5px;
+  transition-duration: .3s;
+  transition-property: opacity, transform;
+  user-select: none;
+  will-change: opacity, transform;
+}
+
+.arrow-down i:hover {
+  opacity: 1;
+  transform: scale(1.25);
+}
+
+.arrow-down i:active {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.skills {
+  background-image: radial-gradient(circle, #D7D7D7, #D7D7D7 1px, #FFF 1px, #FFF);
+  background-size: 28px 28px;
+  color: #353535;
+  display: flex;
+  justify-content: center;
+  min-height: 15vh;
+  padding: 64px;
+  position: relative;
+}
+
+.skills-content {
+  min-width: 26rem;
+  text-align: center;
+}
+
+.skills-content .title {
+  font-size: 2.25rem;
+  line-height: 1.125;
+  margin-bottom: 1.5rem;
+}
+
+.skills-content .subtitle {
+  font-size: 1.5rem;
+  line-height: 1.125;
+  margin-bottom: .5rem;
+}
+
 /* 4.Responsiveness */
 
 @media screen and (max-width: 799px) {
-  .content {
+  .content,
+  .skills {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 0;
   }
 
-  .about {
+  .skills {
+    padding: 4rem 0;
+  }
+
+  .about,
+  .skills-content {
     flex-grow: 0;
     flex-shrink: 0;
     padding-left: 1.5em;
@@ -217,14 +277,16 @@ a {
 }
 
 @media screen and (min-width: 800px) {
-  .content {
+  .content,
+  .skills {
     align-items: center;
     justify-content: space-around;
     justify-content: space-evenly;
     padding: 4rem;
   }
   
-  .about {
+  .about,
+  .skills-content {
     flex-grow: 1;
     flex-shrink: 1;
   }

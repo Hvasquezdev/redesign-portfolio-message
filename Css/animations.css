@@ -8,7 +8,8 @@
 .hr,
 .description,
 .contact,
-.social li {
+.social li,
+.arrow-down {
   animation-duration: 1s;
   animation-timing-function: cubic-bezier(0, 0.5, 0, 1);
   animation-fill-mode: both;
@@ -77,6 +78,10 @@
   animation-delay: 1.2s;
 }
 
+.arrow-down {
+  animation-delay: 1.3s;
+}
+
 
 /* 3.Keyframes */
 
@@ -123,6 +128,18 @@
   to {
     opacity: 1;
     transform: scale(1.1) translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 
@@ -202,8 +219,13 @@
   animation-name: slideUp;
 }
 
-.social li {
+.social li,
+.arrow-down {
   animation-duration: 500ms;
   animation-name: slideUp;
   animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1.5);
+}
+
+.pulse-down {
+  animation: pulse 1.5s infinite;
 }
