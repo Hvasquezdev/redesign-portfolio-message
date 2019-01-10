@@ -15,9 +15,7 @@
   animation-fill-mode: both;
 }
 
-.wallpaper,
-.picture-shadow,
-.picture-image {
+.wallpaper {
   opacity: 0;
 }
 
@@ -195,11 +193,11 @@
   animation-name: zoomOut;
 }
 
-.picture.is-loaded .picture-shadow {
+.picture-shadow {
   animation-name: picShadow;
 }
 
-.picture.is-loaded .picture-image {
+.picture-image {
   animation-name: picImage;
 }
 

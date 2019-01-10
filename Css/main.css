@@ -61,8 +61,26 @@ a {
 
 .content {
   display: flex;
+  flex-direction: column;
   position: relative;
   min-height: 100vh;
+}
+
+.top {
+  font-size: 15rem;
+  margin-bottom: 35px;
+  max-height: 20rem;
+  max-width: 20rem;
+}
+
+.top i {
+  opacity: 1;
+}
+
+.top .picture {
+  display: flex;
+  height: 100%;
+  justify-content: center;
 }
 
 .about {
@@ -266,6 +284,12 @@ a {
     padding: 4rem 0;
   }
 
+  .top {
+    margin-bottom: 3rem;
+    font-size: 10rem;
+    width: 100%;
+  }
+
   .about,
   .skills-content {
     flex-grow: 0;
@@ -283,6 +307,13 @@ a {
     justify-content: space-around;
     justify-content: space-evenly;
     padding: 4rem;
+  }
+
+  .top {
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 100%;
+    width: 100%;
   }
   
   .about,
